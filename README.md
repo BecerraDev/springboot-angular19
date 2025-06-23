@@ -1,5 +1,7 @@
 # Prueba Técnica - Desarrollador Java
 
+Muchas gracias por la oportunidad y por este desafío como desarrollador junior. Adjunto toda la información relacionada al proyecto, así como la guía para su ejecución y pruebas.
+
 ## Descripción
 
 Proyecto full-stack que implementa un catálogo de productos con:
@@ -52,6 +54,7 @@ Backend Spring Boot en http://localhost:8080
 
 Frontend Angular (ng serve) en http://localhost:4200 → entrar aquí.
 
+Swagger en http://localhost:8080/swagger-ui/index.html
 
 ```
 
@@ -78,9 +81,9 @@ Una vez logueado, se accede al Realm miapp y se redirige a /productos, donde se 
 ```bash
 docker-compose -f docker-compose-test.yml up --build
 ```
-Para acceder al test manual de frontend> comando : ng test
+Para acceder al test manual de frontend (JASMINE) > comando : ng test
 
-Para acceder al test manual de backend> comando : mvn clean test
+Para acceder al test manual de backend (MOCKITO JUNIT) > comando : mvn clean test
 
 ### Solución implementada.
 
@@ -129,9 +132,25 @@ El script de Docker debería ejecutar las migraciones según el orden del db.cha
 
 Para solucionarlo, borra la caché de la base de datos local, baja los contenedores con docker-compose down y luego levanta todo de nuevo con docker-compose up --build.
 
+Base de datos tiene el nombre de "catalog_db"
+
 ## 4. Backend no funciona (problema target). 
 
 Para que el backend funcione, necesitas el JAR en target/ (ej: catalog-0.0.1-SNAPSHOT.jar).
 Ejecuta dentro de backend: mvn clean package
+
+
+## TEST EJECUTADOS FRONTEND
+
+  // === Test 1: Comprobar creación del componente ===
+  // === Test 2: Cargar productos al inicializar el componente ===
+  // === Test 3: Manejar error cuando falla la carga de productos ===
+  // === Test 4: Aplicar filtro correctamente en la tabla ===
+
+## TEST EJECUTADOS BACKEND
+
+  // === Test 1:  Verifica que la API devuelve una lista paginada de productos correctamente === 
+  // === Test 2: Verifica que la API devuelve un producto existente correctamente al solicitar por ID ===
+  // === Test 3: Verifica que la API devuelve un error 404 cuando se solicita un producto inexistente ===
 
 
