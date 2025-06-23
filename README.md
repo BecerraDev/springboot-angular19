@@ -64,7 +64,7 @@ http://localhost:4200 -> entrar aquí.
 Cuando accedes a http://localhost:4200, serás redirigido automáticamente a Keycloak para autenticación.
 
 ```bash
-Usuario:	usuario
+Usuario: usuario
 Contraseña: usuario
 ```
 
@@ -78,7 +78,17 @@ docker-compose -f docker-compose-test.yml up --build
 Para acceder al test manual de frontend> comando : ng test
 Para acceder al test manual de backend> comando : mvn clean test
 
-### 5. 
+### Solución implementada.
+
+
+
+
+
+
+
+
+
+
 
 ### Nota sobre tiempos de generación de imágenes
 
