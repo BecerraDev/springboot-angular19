@@ -143,14 +143,20 @@ Ejecuta dentro de backend: mvn clean package
 ## TEST EJECUTADOS FRONTEND
 
   // === Test 1: Comprobar creación del componente ===
+
   // === Test 2: Cargar productos al inicializar el componente ===
+
   // === Test 3: Manejar error cuando falla la carga de productos ===
+
   // === Test 4: Aplicar filtro correctamente en la tabla ===
 
 ## TEST EJECUTADOS BACKEND
 
   // === Test 1:  Verifica que la API devuelve una lista paginada de productos correctamente === 
+
   // === Test 2: Verifica que la API devuelve un producto existente correctamente al solicitar por ID ===
+
   // === Test 3: Verifica que la API devuelve un error 404 cuando se solicita un producto inexistente ===
+
 
 
