@@ -50,10 +50,10 @@ Keycloak en
 http://localhost:8180
 
 Backend Spring Boot en
- http://localhost:8080
+http://localhost:8080
 
 Frontend Angular en modo desarrollo (ng serve) en h
-ttp://localhost:4200 -> entrar aquí.
+http://localhost:4200 -> entrar aquí.
 ```
 
 ⚠️ El frontend corre en modo desarrollo con ng serve por temas de compilación y tiempo. No se usa Nginx. 
