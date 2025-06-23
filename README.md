@@ -43,13 +43,17 @@ docker-compose up --build
 Esto levantará: 
 
 ```bash
-PostgreSQL en localhost:5432
+PostgreSQL en 
+localhost:5432
 
-Keycloak en http://localhost:8180
+Keycloak en 
+http://localhost:8180
 
-Backend Spring Boot en http://localhost:8080
+Backend Spring Boot en
+ http://localhost:8080
 
-Frontend Angular en modo desarrollo (ng serve) en http://localhost:4200 -> entrar aquí.
+Frontend Angular en modo desarrollo (ng serve) en h
+ttp://localhost:4200 -> entrar aquí.
 ```
 
 ⚠️ El frontend corre en modo desarrollo con ng serve por temas de compilación y tiempo. No se usa Nginx. 
