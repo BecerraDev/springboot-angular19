@@ -119,7 +119,7 @@ Contactarme por este medio
 Abrir en el navegador: http://localhost:8180/admin/master/console/
 Iniciar sesión con las credenciales admin (por defecto admin/admin si no cambiaste). En el panel de administración, crear un nuevo realm con el nombre "miapp" y el cliente "frontend".
 
-## 2. Base de datos no conecta local.
+## 2. Base de datos no conecta local o error en test (revision de base de datos)
 
 Se implemento H2 para realizar test unitarios y no tener que cambiar la base de datos durante pruebas. Si POSTGRESQL falla, corregir los datos de application-dev.yml (backend) con los datos correctos de tú usuario.  
 
