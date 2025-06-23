@@ -39,8 +39,12 @@ public class ProductoController {
     @Operation(summary = "Listar productos paginados", description = "Obtiene una página de productos con paginación")
     public ResponseEntity<Page<Producto>> listarProductos(
             @Parameter(description = "Paginación y ordenamiento") Pageable pageable) {
-        logger.info("Listando productos con pageable: {}", pageable);
+        
+        logger.info("GET /api/productos - Listando productos con pageable: {}", pageable);
+        
         Page<Producto> productos = productoService.obtenerTodos(pageable);
+        logger.debug("Cantidad de productos retornados: {}", productos.getNumberOfElements());
+        
         return ResponseEntity.ok(productos);
     }
 
@@ -52,15 +56,24 @@ public class ProductoController {
     @Operation(summary = "Obtener producto por ID", description = "Devuelve un producto dado su ID")
     public ResponseEntity<Producto> obtenerProducto(
             @Parameter(description = "ID del producto a obtener") @PathVariable Long id) {
-        logger.info("Buscando producto con id: {}", id);
-        Optional<Producto> productoOpt = productoService.obtenerPorId(id);
 
-        if (productoOpt.isPresent()) {
-            logger.info("Producto encontrado: {}", productoOpt.get());
-            return ResponseEntity.ok(productoOpt.get());
-        } else {
-            logger.warn("Producto no encontrado con id: {}", id);
-            return ResponseEntity.notFound().build();
+        logger.info("GET /api/productos/{} - Buscando producto", id);
+        
+        try {
+            Optional<Producto> productoOpt = productoService.obtenerPorId(id);
+
+            if (productoOpt.isPresent()) {
+                logger.info("Producto encontrado: {}", productoOpt.get().getNombre());
+                return ResponseEntity.ok(productoOpt.get());
+            } else {
+                logger.warn("Producto no encontrado con id: {}", id);
+                return ResponseEntity.notFound().build();
+            }
+
+        } catch (Exception e) {
+            logger.error("Error al buscar producto con id {}: {}", id, e.getMessage(), e);
+            return ResponseEntity.internalServerError().build();
         }
     }
 }
+
