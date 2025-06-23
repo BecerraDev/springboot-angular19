@@ -82,21 +82,21 @@ Una vez que veas en los logs que Keycloak ha terminado de cargar y se puede acce
 
 
 
-## SI SURGEN ERRORES ##
+### SI SURGEN ERRORES ###
 Contactarme por este medio 
 . Contacto: (+56) 9 5606 4816 (Móvil)
 . Correo: byron.becerra.aravena@gmail.com
 
-1. Si miapp no funciona, o no se puede acceder a localhost:4200
+## 1. Si miapp no funciona, o no se puede acceder a localhost:4200
   
 Abrir en el navegador: http://localhost:8180/admin/master/console/
 Iniciar sesión con las credenciales admin (por defecto admin/admin si no cambiaste). En el panel de administración, crear un nuevo realm con el nombre "miapp" y el cliente "frontend".
 
-2. Base de datos no conecta local.
+## 2. Base de datos no conecta local.
 
 Se implemento H2 para realizar test unitarios y no tener que cambiar la base de datos durante pruebas. Si POSTGRESQL falla, corregir los datos de application-dev.yml (backend) con los datos correctos de tú usuario.  
 
-3. Migraciones fallan.
+## 3. Migraciones fallan.
 
 El script de Docker debería ejecutar las migraciones según el orden del db.changelog-master.yml. A veces puede pasar que Docker corrompa las migraciones, dejando alguna en proceso y bloqueando las siguientes.
 
