@@ -56,6 +56,7 @@ Frontend Angular (ng serve) en http://localhost:4200 → entrar aquí.
 ```
 
 ⚠️ El frontend corre en modo desarrollo con ng serve por temas de compilación y tiempo. No se usa Nginx. 
+
 ⚠️ Recordar tener docker corriendo en segundo plano.
 
 
