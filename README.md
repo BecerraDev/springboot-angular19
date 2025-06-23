@@ -87,7 +87,7 @@ Para acceder al test manual de backend (MOCKITO JUNIT) > comando : mvn clean tes
 
 ### Solución implementada.
 
-El proyecto implementa una arquitectura por capas en el backend (entity, repository, service, controller). Se modelaron dos entidades: Producto y Categoria, estableciendo una relación muchos-a-uno donde cada producto pertenece a una categoría. Se utilizaron más de 25 migraciones con Liquibase para crear las tablas, definir relaciones y precargar datos en ambas entidades. Se aplicaron buenas prácticas en la estructura del proyecto, incluyendo comentarios en los test, validaciones en la capa de controlador (backend) y en el componente producto (frontend). Se evitó el uso de valores hardcodeados, permitiendo que la solución sea escalable y mantenible. Se implemento uso de logging pero no demasiados por el hecho de solo tener una entidad, 
+El proyecto implementa una arquitectura por capas en el backend (entity, repository, service, controller). Se modelaron dos entidades: Producto y Categoria, estableciendo una relación muchos-a-uno donde cada producto pertenece a una categoría. Se utilizaron más de 25 migraciones con Liquibase para crear registros, definir relaciones y precargar datos en ambas entidades. Se aplicaron buenas prácticas en la estructura del proyecto, incluyendo comentarios en los test, validaciones en la capa de controlador (backend) y en el componente producto (frontend). Se evitó el uso de valores hardcodeados, permitiendo que la solución sea escalable y mantenible. Se implemento uso de logging pero no demasiados por el hecho de solo tener una entidad, 
 
 
 
