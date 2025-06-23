@@ -59,6 +59,9 @@ http://localhost:4200 -> entrar aquí.
 ⚠️ El frontend corre en modo desarrollo con ng serve por temas de compilación y tiempo. No se usa Nginx. 
 ⚠️ Recordar tener docker corriendo en segundo plano.
 
+
+---
+
 ### 3. Acceso a la aplicación
 
 Cuando accedes a http://localhost:4200, serás redirigido automáticamente a Keycloak para autenticación.
@@ -89,6 +92,7 @@ Para acceder al test manual de backend> comando : mvn clean test
 
 
 
+---
 
 ### Nota sobre tiempos de generación de imágenes
 
@@ -104,11 +108,14 @@ Una vez que veas en los logs que Keycloak ha terminado de cargar y se puede acce
 
 
 
+---
 
 ### SI SURGEN ERRORES ###
 Contactarme por este medio 
 . Contacto: (+56) 9 5606 4816 (Móvil)
 . Correo: byron.becerra.aravena@gmail.com
+
+---
 
 ## 1. Si miapp no funciona, o no se puede acceder a localhost:4200
   
