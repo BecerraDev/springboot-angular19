@@ -47,6 +47,7 @@ Backend Spring Boot en http://localhost:8080
 Frontend Angular en modo desarrollo (ng serve) en http://localhost:4200 -> entrar aquí.
 
 ⚠️ El frontend corre en modo desarrollo con ng serve por temas de compilación y tiempo. No se usa Nginx. 
+⚠️ Recordar tener docker corriendo en segundo plano.
 
 ### 3. Acceso a la aplicación
 
@@ -100,6 +101,11 @@ Se implemento H2 para realizar test unitarios y no tener que cambiar la base de 
 
 El script de Docker debería ejecutar las migraciones según el orden del db.changelog-master.yml. A veces puede pasar que Docker corrompa las migraciones, dejando alguna en proceso y bloqueando las siguientes.
 
-Para solucionarlo, borra la caché de la base de datos local y renueva las imágenes de Docker.
+Para solucionarlo, borra la caché de la base de datos local, baja los contenedores con docker-compose down y luego levanta todo de nuevo con docker-compose up --build.
+
+## 4. Backend no funciona (problema target). 
+
+Para que el backend funcione, necesitas el JAR en target/ (ej: catalog-0.0.1-SNAPSHOT.jar).
+Ejecuta dentro de backend: mvn clean package
 
 
