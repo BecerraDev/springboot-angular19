@@ -159,7 +159,11 @@ Ejecuta dentro de backend: mvn clean package
   // === Test 3: Verifica que la API devuelve un error 404 cuando se solicita un producto inexistente ===
 
 
-  Foto de resultado esperado:
+  #### Foto de resultado esperado: ####
+
   ![image](https://github.com/user-attachments/assets/9365da2e-65e0-4cc3-8aee-ab2bf9835724)
+
+
+
 
 
