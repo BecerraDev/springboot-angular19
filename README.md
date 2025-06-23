@@ -78,6 +78,7 @@ Una vez logueado, se accede al Realm miapp y se redirige a /productos, donde se 
 docker-compose -f docker-compose-test.yml up --build
 ```
 Para acceder al test manual de frontend> comando : ng test
+
 Para acceder al test manual de backend> comando : mvn clean test
 
 ### Solución implementada.
