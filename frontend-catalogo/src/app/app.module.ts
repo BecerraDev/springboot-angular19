@@ -31,7 +31,9 @@ import { FooterComponent } from './components/footer/footer.component';
     FormsModule,
   ],
   providers: [
-    { provide: LocationStrategy, useClass: HashLocationStrategy }
+    { provide: LocationStrategy, useClass: HashLocationStrategy 
+      
+    }
   ],
   bootstrap: [AppComponent]
 })
