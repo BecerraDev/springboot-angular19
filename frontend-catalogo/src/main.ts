@@ -12,8 +12,8 @@ bootstrapApplication(AppComponent, {
     provideHttpClient(),
     provideKeycloak({
       config: {
-        url: 'http://host.docker.internal:8180',  // URL de tu Keycloak
-          realm: 'miapp',
+        url: 'http://localhost:8180/',  // URL donde corre Keycloak
+        realm: 'miapp',
         clientId: 'frontend',
       },
       initOptions: {
